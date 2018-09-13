@@ -36,8 +36,16 @@ public class ParseInput {
             }
         }
         return matrix;
-
     }
 
+    public int[] getEmissions(){
+        int nr = io.getInt();
 
+        int[] emission = new int[nr];
+
+        for (int i = 0; i<nr; i++){
+            emission[i] = io.getInt();
+        }
+        return emission;
+    }
 }
