@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Main {
+    // Constructor
     public static void main(String[] args) {
 
         ParseInput parse = new ParseInput();
@@ -29,11 +30,13 @@ public class Main {
       }
     }
 
+    // Does nothing.
     private static double[][] calcPropX(double[][] A, double[][] B){
 
         return matrixMultiplication(A, B);
     }
 
+    // Computes a matrix multiplication where A should have dimensions (x,y) and B (y,z)
     private static double[][] matrixMultiplication(double[][] A, double[][] B) {
         int rows = A.length;
         int resCols = B[0].length;
