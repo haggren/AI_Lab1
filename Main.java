@@ -84,13 +84,14 @@ public class Main {
         }
         return matrix;
     }
-    
+    //TODO: fix this shit
     public double[][] alphaPass(double[][] A, double[][] B, int[] obs, double[][] pi, int n, double [][] alphaMatrix){
         if (n == 0){
             double[][] firstAlpha =  elementWiseMultiplication(pi,getColumn(B, obs[n]));
             alphaMatrix = insertColInMatrix(firstAlpha, alphaMatrix, n);
             return alphaMatrix;
         }
+        //här blir det fel
         double[][] notAlpha = matrixMultiplication(alphaPass(A,B,obs,pi,n-1, alphaMatrix), A);
         double [][] alphaCol =  elementWiseMultiplication(notAlpha, getColumn(B,obs[n]));
         alphaMatrix = insertColInMatrix(alphaCol, alphaMatrix, n-1);
